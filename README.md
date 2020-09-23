@@ -1,4 +1,6 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Eruption_1954_Kilauea_Volcano.jpg" width="500" height="500" />
+This Work Originally Published on [Kaggle](https://www.kaggle.com/behcetsenturk/finding-volcanoes-with-cnn).
+
+<img src="./finding-volcanoes-with-cnn_files/p1.png" height ="70%" width="70%" />
 
 # **Finding Volcanoes with CNN** <a id="0"></a> <br>
 
@@ -25,32 +27,6 @@
 We have a lot of images which taken by Magellan spacecraft from Venus. Some of them belong to Venus volcanoes and our main task is the classification of them.
 
 Okay let's start with load the data.
-
-
-```python
-!pip install plotly==4.9
-!pip install -U kaleido
-```
-
-    Collecting plotly==4.9
-    [?25l  Downloading https://files.pythonhosted.org/packages/bf/5f/47ab0d9d843c5be0f5c5bd891736a4c84fa45c3b0a0ddb6b6df7c098c66f/plotly-4.9.0-py2.py3-none-any.whl (12.9MB)
-    [K    100% |████████████████████████████████| 12.9MB 3.2MB/s eta 0:00:01
-    [?25hRequirement already satisfied: retrying>=1.3.3 in /opt/conda/lib/python3.6/site-packages (from plotly==4.9) (1.3.3)
-    Requirement already satisfied: six in /opt/conda/lib/python3.6/site-packages (from plotly==4.9) (1.12.0)
-    Installing collected packages: plotly
-      Found existing installation: plotly 3.5.0
-        Uninstalling plotly-3.5.0:
-          Successfully uninstalled plotly-3.5.0
-    Successfully installed plotly-4.9.0
-    [33mYou are using pip version 18.1, however version 20.2.3 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
-    Collecting kaleido
-    [?25l  Downloading https://files.pythonhosted.org/packages/7c/26/cc562909fe6838ee3a98c0b2f83e79cbe2dbea8cddb7f3445fd347253d8e/kaleido-0.0.3.post1-py2.py3-none-manylinux1_x86_64.whl (74.0MB)
-    [K    100% |████████████████████████████████| 74.0MB 673kB/s eta 0:00:01    17% |█████▌                          | 12.6MB 8.9MB/s eta 0:00:07    69% |██████████████████████▎         | 51.6MB 40.5MB/s eta 0:00:01
-    [?25hInstalling collected packages: kaleido
-    Successfully installed kaleido-0.0.3.post1
-    [33mYou are using pip version 18.1, however version 20.2.3 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
 
 
 
@@ -1064,7 +1040,6 @@ Resize the numpy arrays in here. I just translate the 7000 images 1D to 2D
 X_train_copy = np.resize(X_train_copy, (7000, 110, 110))
 ```
 
-![](http://i63.tinypic.com/jt3zpg.png)
 
 Then I change the numerical values with their string equivalents.
 
@@ -1250,7 +1225,7 @@ In a CNN model we use Convolutional layers and Maxpool layers then we add flatte
 
 Please look the image below
 
-![dl](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/280px-Colored_neural_network.svg.png)
+![dl](./finding-volcanoes-with-cnn_files/p2.png)
 
 In this image, we have 3 feature in Input Layer. If we classify the apple and orange we can think this 3 feature as weight, colour, and volume. Colour is an important feature besides the volume or weight when we classify apple and orange.
 
@@ -1602,7 +1577,7 @@ We cleaned our data and now we can start to build a new model this time we will 
 
 Dropout layers will reduce the overfitting. They cut randomly the connections between nodes in layers.
 
-<img src="https://cdn-images-1.medium.com/max/1044/1*iWQzxhVlvadk6VAJjsgXgg.png" width="500" height="500" />
+<img src="./finding-volcanoes-with-cnn_files/p3.png" height ="49%" width="49%"></img>
 
 Okay let's apply them.
 
